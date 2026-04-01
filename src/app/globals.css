@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #121212;
+  --foreground: #ededed;
+  --muted: #888888;
+  --row-hover: #181818;
+  --row-active: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  background-color: #0c0c0f;
+  background-image:
+    radial-gradient(
+      ellipse 120% 80% at 50% -20%,
+      rgba(130, 180, 255, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 90% 70% at 100% 30%,
+      rgba(160, 120, 255, 0.08),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 80% 60% at 0% 80%,
+      rgba(90, 220, 210, 0.07),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 100% 50% at 50% 100%,
+      rgba(255, 255, 255, 0.03),
+      transparent 45%
+    );
+  background-attachment: fixed;
+}
+
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (min-width: 640px) {
+  .touch-target {
+    min-height: 0;
+    min-width: 0;
+  }
+}
